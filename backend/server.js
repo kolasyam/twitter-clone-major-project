@@ -8,7 +8,6 @@ import authRoutes from "./routes/auth.route.js";
 import userRoutes from "./routes/user.route.js";
 import postRoutes from "./routes/post.route.js";
 import notificationRoutes from "./routes/notification.route.js";
-
 import connectMongoDB from "./db/connectMongoDB.js";
 
 dotenv.config();
@@ -21,7 +20,7 @@ cloudinary.config({
 
 const app = express();
 const PORT = process.env.PORT || 8000;
-const __dirname = path.resolve();
+// const __dirname = path.resolve();
 
 app.use(express.json({ limit: "5mb" })); // to parse req.body
 // limit shouldn't be too high to prevent DOS
